@@ -2,7 +2,7 @@
 // Snowflakes
 // =========================
 const snowContainer = document.getElementById('snowflakes');
-const snowCount = 70;
+const snowCount = 10;
 
 for (let i = 0; i < snowCount; i++) {
     let snow = document.createElement('div');

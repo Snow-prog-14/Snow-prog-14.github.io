@@ -1,0 +1,11 @@
+/* =========================
+   Contact Section
+========================= */
+#contact .row { align-items: center; }
+.form-control, .btn { border-radius: 0; }
+.btn-primary { background-color: #3b8ed0; border: none; }
+
+/* =========================
+   Footer
+========================= */
+footer { padding: 20px 0; text-align: center; background-color: #08101f; }

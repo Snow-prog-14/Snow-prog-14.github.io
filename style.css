@@ -239,6 +239,58 @@ a:hover { color: #fff; }
 .skill-circle .progress { stroke: #3b8ed0; stroke-linecap: round; stroke-dasharray: 440; stroke-dashoffset: 440; transition: stroke-dashoffset 2s; }
 .skill-circle text { fill: #fff; font-size: 1rem; text-anchor: middle; dominant-baseline: middle; font-weight: 600; }
 
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.skill-card {
+    background: linear-gradient(135deg, #102b4c, #1c3b5a);
+    border-radius: 15px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 160px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: default;
+}
+
+.skill-card img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.skill-card span {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #00d4ff;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,212,255,0.5);
+}
+
+.skill-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,212,255,0.5);
+}
+
+.skill-card img {
+    max-width: 50px;
+    height: auto;
+}
+
 /* =========================
    Services Section
 ========================= */

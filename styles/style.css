@@ -187,6 +187,27 @@ a:hover { color: #fff; }
 }
 .portfolio-card:hover .portfolio-overlay { opacity: 1; }
 
+.project-card {
+    position: relative;
+    height: 450px;              /* lock the card height */
+    border-radius: 15px;
+    overflow: hidden;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.project-details {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+
 .portfolio-overlay h3 { font-size: 1.5rem; color: #00d4ff; margin-bottom: 10px; }
 .portfolio-overlay p { font-size: 0.95rem; color: #fff; margin-bottom: 15px; }
 .portfolio-overlay .btn {

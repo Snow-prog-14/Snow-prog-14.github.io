@@ -47,12 +47,16 @@ a:hover { color: #fff; }
    Hero Section
 ========================= */
 .hero {
-    align-items: center;
-    justify-content: center; gap: 40px;
     min-height: 100vh;
     background: linear-gradient(135deg, #0a1424, #010b1c);
-    color: #fff;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 60px 20px;
+    }
 }
 
 .hero-text { max-width: 600px; }
@@ -118,9 +122,6 @@ a:hover { color: #fff; }
 }
 
 /* Responsive Hero */
-@media (max-width: 1024px) {
-    .hero { flex-direction: column; text-align: center; padding: 50px 20px; }
-}
 @media (max-width: 768px) {
     .hero-graphic img {
         max-width: 280px;

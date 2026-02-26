@@ -47,11 +47,10 @@ a:hover { color: #fff; }
    Hero Section
 ========================= */
 .hero {
-    display: flex;
     align-items: center;
     justify-content: center; gap: 40px;
     min-height: 100vh;
-    padding: 0 5%;
+    padding: 0;
     background: linear-gradient(135deg, #0a1424, #010b1c);
     color: #fff;
     position: relative;
@@ -92,9 +91,6 @@ a:hover { color: #fff; }
     width: 100%;
     max-width: 500px;
     height: auto;
-    object-fit: contain;
-    animation: float 4s ease-in-out infinite;
-    transition: transform 0.5s ease;
 }
 @keyframes float {
     0%, 100% { transform: translateY(0); }
@@ -125,14 +121,12 @@ a:hover { color: #fff; }
 /* Responsive Hero */
 @media (max-width: 1024px) {
     .hero { flex-direction: column; text-align: center; padding: 50px 20px; }
-    .hero-graphic img { width: 600px; }
 }
 @media (max-width: 768px) {
-    .hero {flex-direction: column; padding: 40px 20px;}
-    .hero-graphic img { width: 350px; }
-    .hero-buttons .btn { margin-bottom: 15px; }
+    .hero-graphic img {
+        max-width: 280px;
+    }
 }
-
 /* =========================
    About Section
 ========================= */

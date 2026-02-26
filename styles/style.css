@@ -5,7 +5,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #0a1a2b;
     color: #fff;
-    overflow-x: hidden;
+    /*overflow-x: hidden; */
     scroll-behavior: smooth;
     position: relative;
     margin: 0;
@@ -49,7 +49,7 @@ a:hover { color: #fff; }
     align-items: center;
     justify-content: space-between;
     min-height: 100vh;
-    padding: 0 50px;
+    padding: 0 5%;
     background: linear-gradient(135deg, #0a1424, #010b1c);
     color: #fff;
     position: relative;
@@ -87,7 +87,8 @@ a:hover { color: #fff; }
     flex: 1;
 }
 .hero-graphic img {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: auto;
     max-width: none;
     object-fit: contain;
@@ -121,12 +122,12 @@ a:hover { color: #fff; }
 }
 
 /* Responsive Hero */
-@media (max-width: 1200px) { .hero-graphic img { width: 800px; } }
 @media (max-width: 992px) {
     .hero { flex-direction: column; text-align: center; padding: 50px 20px; }
     .hero-graphic img { width: 600px; }
 }
 @media (max-width: 768px) {
+    .hero {flex-direction: column; padding: 40px 20px;}
     .hero-graphic img { width: 350px; margin: 0 auto; }
     .hero-buttons .btn { margin-bottom: 15px; }
 }
@@ -189,7 +190,7 @@ a:hover { color: #fff; }
 
 .project-card {
     position: relative;
-    height: 450px;              /* lock the card height */
+    min-height: 450px;              /* lock the card height */
     border-radius: 15px;
     overflow: hidden;
 

@@ -14,10 +14,10 @@ export default function Footer(): React.JSX.Element {
             Whether you have a project in mind or just want to connect, feel free to reach out!
           </p>
           <a
-            href="mailto:alejandra.maraasin@example.com"
+            href="mailto:alejandramaraasin0@gmail.com"
             className="text-lg font-medium text-violet-600 hover:text-violet-500 transition-colors"
           >
-            alejandra.maraasin@example.com
+            alejandramaraasin0@gmail.com
           </a>
         </div>
 
@@ -25,7 +25,7 @@ export default function Footer(): React.JSX.Element {
         <div className="flex justify-center gap-6 mt-12">
           {/* GitHub */}
           <Link
-            href="https://github.com/alejandramaraasin"
+            href="https://github.com/snow-prog-14"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-violet-50 border border-violet-100 hover:border-violet-200 transition-all"
@@ -41,7 +41,7 @@ export default function Footer(): React.JSX.Element {
           </Link>
           {/* LinkedIn */}
           <Link
-            href="https://linkedin.com/in/alejandramaraasin"
+            href="https://www.linkedin.com/in/maraasin-alejandra-a-8b85a5368"
             target="_blank"
             rel="noopener noreferrer"
             className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-violet-50 border border-violet-100 hover:border-violet-200 transition-all"

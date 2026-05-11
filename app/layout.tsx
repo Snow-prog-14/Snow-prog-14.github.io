@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -12,34 +12,37 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Ibrahim Memon - Software Engineer & UI/UX Designer",
-  description: "A self-taught UI/UX designer and Software Engineer at WebHR. Creating meaningful and delightful digital products that balance user needs and business goals. 3+ years of industry experience.",
+  title: "Alejandra Maraasin | Software and Web Developer",
+  description:
+    "Portfolio of Alejandra Maraasin, a software and web developer focused on practical, user-friendly systems, responsive web applications, and clean interface design.",
   keywords: [
-    "Ibrahim Memon",
-    "Software Engineer",
-    "UI/UX Designer",
+    "Alejandra Maraasin",
+    "Software Developer",
+    "Web Developer",
     "Frontend Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Web Designer",
-    "WebHR Engineer",
+    "React TypeScript",
+    "ASP.NET Core",
+    "C#",
+    "SQL",
     "Portfolio",
+    "Computer Engineering",
   ],
-  authors: [{ name: "Ibrahim Memon" }],
-  creator: "Ibrahim Memon",
-  publisher: "Ibrahim Memon",
+  authors: [{ name: "Alejandra Maraasin" }],
+  creator: "Alejandra Maraasin",
+  publisher: "Alejandra Maraasin",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ibiimemon.com",
-    title: "Ibrahim Memon - Software Engineer & UI/UX Designer",
-    description: "A self-taught UI/UX designer and Software Engineer at WebHR. Creating meaningful and delightful digital products.",
-    siteName: "Ibrahim Memon Portfolio",
+    title: "Alejandra Maraasin | Software and Web Developer",
+    description:
+      "Software and web development portfolio focused on clean, practical, and user-friendly systems.",
+    siteName: "Alejandra Maraasin Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ibrahim Memon - Software Engineer & UI/UX Designer",
-    description: "A self-taught UI/UX designer and Software Engineer at WebHR.",
+    title: "Alejandra Maraasin | Software and Web Developer",
+    description:
+      "Portfolio of Alejandra Maraasin, focused on software development, web development, and user-friendly systems.",
   },
   robots: {
     index: true,
@@ -67,12 +70,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="canonical" href="https://ibiimemon.com" />
-      </head>
-      <body
-        className={`${poppins.variable} font-sans antialiased`}
-      >
+      <body className={`${poppins.variable} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>

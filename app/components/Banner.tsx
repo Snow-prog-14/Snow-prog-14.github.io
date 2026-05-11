@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-//sss
 export default function Banner(): React.JSX.Element {
   return (
     <section

@@ -227,7 +227,7 @@ export default function Projects(): React.JSX.Element {
                     <div className="flex gap-4">
                       <a
                         href="#contact"
-                        className="group/link inline-flex items-center gap-3 px-6 py-3 bg-slate-950 text-white rounded-2xl font-black text-[10px] tracking-[0.2em] transition-all hover:bg-violet-600 hover:-translate-y-1"
+                        className="group/link inline-flex items-center gap-3 px-6 py-3 bg-white text-violet-700 border border-violet-200 rounded-2xl font-black text-[10px] tracking-[0.2em] transition-all hover:bg-violet-600 hover:text-white hover:border-violet-600 hover:-translate-y-1 shadow-sm"
                       >
                         VIEW_RESOURCES
                         <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

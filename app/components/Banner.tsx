@@ -154,16 +154,16 @@ export default function Banner(): React.JSX.Element {
             >  
               <a
                 href="#lab"
-                className="group relative inline-flex items-center justify-center px-8 py-4 bg-slate-950 text-white rounded-2xl font-black text-sm tracking-widest overflow-hidden transition-all hover:bg-violet-600 shadow-xl shadow-slate-200"
+                className="group relative inline-flex items-center justify-center px-8 py-4 bg-violet-600 text-white rounded-2xl font-black text-sm tracking-widest overflow-hidden transition-all hover:bg-violet-700 shadow-xl shadow-violet-200 hover:-translate-y-1"
               >
-                <span className="relative z-10">ACCESS_MODULES</span>
+                <span className="relative z-10 uppercase">Access_Modules</span>
               </a>
 
               <a
                 href="/ALEJANDRA-ARINGO-MARAASIN.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-white text-slate-950 border border-slate-200 font-black text-sm tracking-widest transition-all hover:bg-slate-50 hover:border-slate-300"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-white text-slate-900 border border-slate-200 font-black text-sm tracking-widest transition-all hover:bg-violet-50 hover:text-violet-700 hover:border-violet-200 hover:-translate-y-1 shadow-sm"
               >
                 DOCS.PDF
               </a>

@@ -147,7 +147,7 @@ export default function About(): React.JSX.Element {
                 </p>
 
                 <div className="pt-4">
-                  <a href="#contact" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-slate-950 text-white rounded-2xl font-black text-sm tracking-widest overflow-hidden transition-all hover:bg-violet-600">
+                  <a href="#contact" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-violet-600 text-white rounded-2xl font-black text-sm tracking-widest overflow-hidden transition-all hover:bg-violet-700 shadow-xl shadow-violet-200 hover:-translate-y-1">
                     <span className="relative z-10">INITIALIZE_CONNECTION</span>
                     <svg className="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />

@@ -1,20 +1,29 @@
-import { projects, getProjectBySlug } from "@/app/data/projects";
+import { projects, getProjectBySlug, type ProjectDetail } from "@/app/data/projects";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-type Props = {
-  params: Promise<{ slug: string }>;
+type ProjectPageProps = {
+  params: Promise<{
+    slug: string;
+  }>;
+  searchParams?: Promise<{
+    returnTo?: string;
+  }>;
 };
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({
+  return projects.map((project: ProjectDetail) => ({
     slug: project.slug,
   }));
 }
 
-export default async function ProjectPage({ params }: Props) {
+export default async function ProjectPage({ params, searchParams }: ProjectPageProps) {
   const { slug } = await params;
+  const resolvedSearchParams = searchParams ? await searchParams : {};
+  const returnTarget = resolvedSearchParams.returnTo ?? "lab";
+  const backHref = `/#${returnTarget}`;
+
   const project = getProjectBySlug(slug);
 
   if (!project) {
@@ -33,7 +42,7 @@ export default async function ProjectPage({ params }: Props) {
       <div className="container mx-auto max-w-5xl px-6 relative z-10 pt-32">
         {/* Navigation */}
         <Link 
-          href="/#lab"
+          href={backHref}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-50 border border-gray-100 text-sm font-bold text-gray-500 hover:text-violet-600 hover:border-violet-200 transition-all mb-12 group"
         >
           <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -70,7 +79,7 @@ export default async function ProjectPage({ params }: Props) {
             <div className="col-span-2">
               <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1">Infrastructure</p>
               <div className="flex flex-wrap gap-2 mt-1">
-                {project.tech.slice(0, 3).map(t => (
+                {project.tech.slice(0, 3).map((t: string) => (
                   <span key={t} className="text-[9px] font-black text-violet-600 bg-violet-50 px-2 py-0.5 rounded border border-violet-100 uppercase tracking-wider">{t}</span>
                 ))}
                 {project.tech.length > 3 && <span className="text-[9px] font-black text-gray-400 uppercase">+{project.tech.length - 3} MORE</span>}
@@ -111,7 +120,7 @@ export default async function ProjectPage({ params }: Props) {
                 <h2 className="text-xl font-black text-gray-950 uppercase tracking-widest">Core Features</h2>
               </div>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {project.features.map((feature, i) => (
+                {project.features.map((feature: string, i: number) => (
                   <li key={i} className="p-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-start gap-3 group hover:border-cyan-200 transition-colors">
                     <span className="w-5 h-5 rounded-full bg-cyan-100 text-cyan-600 flex items-center justify-center text-[10px] font-black shrink-0">
                       {i + 1}
@@ -140,7 +149,7 @@ export default async function ProjectPage({ params }: Props) {
                 <h2 className="text-lg font-black text-gray-950 uppercase tracking-widest">Stack Modules</h2>
               </div>
               <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech) => (
+                {project.tech.map((tech: string) => (
                   <span key={tech} className="px-3 py-1.5 rounded-xl bg-white border border-gray-100 text-[10px] font-black text-gray-500 uppercase tracking-widest hover:border-violet-200 hover:text-violet-600 transition-colors shadow-sm">
                     {tech}
                   </span>
@@ -161,7 +170,7 @@ export default async function ProjectPage({ params }: Props) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {project.gallery.map((img, i) => (
+            {project.gallery.map((img: string, i: number) => (
               <div key={i} className="group relative aspect-video rounded-3xl overflow-hidden border border-gray-100 bg-gray-50 hover:border-violet-200 transition-all shadow-xl shadow-gray-200/40">
                 <Image 
                   src={img}
@@ -178,7 +187,7 @@ export default async function ProjectPage({ params }: Props) {
         {/* Footer Navigation */}
         <footer className="mt-24 pt-12 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
           <Link 
-            href="/#lab"
+            href={backHref}
             className="px-8 py-4 rounded-2xl bg-slate-950 text-white text-xs font-black tracking-[0.2em] hover:bg-violet-600 transition-all shadow-xl shadow-slate-200"
           >
             RETURN_TO_BASE

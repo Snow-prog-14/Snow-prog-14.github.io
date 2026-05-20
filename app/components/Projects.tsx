@@ -29,7 +29,8 @@ const featuredProjects: Project[] = [
     slug: "tenant-billing",
     title: "Tenant Billing Management System",
     type: "Billing and Records Management System",
-    description: "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
+    description:
+      "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
     image: "/pics/tenant-billing.png",
     tech: ["React TypeScript", "ASP.NET Core", "C#", "SQL", "REST API"],
   },
@@ -143,7 +144,7 @@ export default function Projects(): React.JSX.Element {
       {/* Background Accents */}
       <div className="pointer-events-none absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-violet-100/40 blur-3xl" />
       <div className="pointer-events-none absolute right-[-8%] top-1/2 h-80 w-80 rounded-full bg-cyan-100/30 blur-3xl" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-[size:40px_40px] opacity-40" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-size-[40px_40px] opacity-40" />
 
       <div className="container relative z-10 mx-auto max-w-7xl">
         <motion.div
@@ -174,11 +175,12 @@ export default function Projects(): React.JSX.Element {
             return (
               <motion.article
                 key={project.id}
+                id={`project-${project.slug}`}
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.25 }}
-                className="group relative"
+                className="group relative scroll-mt-32"
               >
                 <div className="absolute -inset-8 rounded-[3rem] bg-linear-to-br from-violet-50/50 via-white to-cyan-50/50 opacity-0 group-hover:opacity-100 transition duration-500 shadow-2xl shadow-violet-100/20" />
 
@@ -235,7 +237,7 @@ export default function Projects(): React.JSX.Element {
 
                     <div className="flex gap-4">
                       <Link
-                        href={`/projects/${project.slug}`}
+                        href={`/projects/${project.slug}?returnTo=project-${project.slug}`}
                         className="group/link inline-flex items-center gap-3 px-6 py-3 bg-white text-violet-700 border border-violet-200 rounded-2xl font-black text-[10px] tracking-[0.2em] transition-all hover:bg-violet-600 hover:text-white hover:border-violet-600 hover:-translate-y-1 shadow-sm"
                       >
                         View Details

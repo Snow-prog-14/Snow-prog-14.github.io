@@ -156,7 +156,7 @@ export default function Banner(): React.JSX.Element {
                 href="#lab"
                 className="group relative inline-flex items-center justify-center px-8 py-4 bg-violet-600 text-white rounded-2xl font-black text-sm tracking-widest overflow-hidden transition-all hover:bg-violet-700 shadow-xl shadow-violet-200 hover:-translate-y-1"
               >
-                <span className="relative z-10 uppercase">Access_Modules</span>
+                <span className="relative z-10 uppercase">Projects</span>
               </a>
 
               <a
@@ -165,7 +165,7 @@ export default function Banner(): React.JSX.Element {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-2xl bg-white text-slate-900 border border-slate-200 font-black text-sm tracking-widest transition-all hover:bg-violet-50 hover:text-violet-700 hover:border-violet-200 hover:-translate-y-1 shadow-sm"
               >
-                DOCS.PDF
+                Resume
               </a>
             </motion.div>
           </motion.div>
@@ -196,7 +196,7 @@ export default function Banner(): React.JSX.Element {
                   </div>
                   
                   {/* Dashboard Content */}
-                  <div className="p-8 bg-white min-h-[320px]">
+                  <div className="p-8 bg-white min-h-88">
                     <div className="mb-8">
                       <h4 className="text-xs font-black text-violet-600 uppercase tracking-widest mb-1">Architecture_Overview</h4>
                       <p className="text-xl font-black text-gray-950">System Interface</p>

@@ -134,7 +134,7 @@ export default function Projects(): React.JSX.Element {
       {/* Background Accents */}
       <div className="pointer-events-none absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-violet-100/40 blur-3xl" />
       <div className="pointer-events-none absolute right-[-8%] top-1/2 h-80 w-80 rounded-full bg-cyan-100/30 blur-3xl" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-[size:40px_40px] opacity-40" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-size-[40px_40px] opacity-40" />
 
       <div className="container relative z-10 mx-auto max-w-7xl">
         <motion.div
@@ -144,9 +144,6 @@ export default function Projects(): React.JSX.Element {
           viewport={{ once: false, amount: 0.45 }}
           className="mx-auto mb-24 max-w-3xl text-center"
         >
-          <p className="mb-4 text-[10px] font-black uppercase tracking-[0.4em] text-violet-600">
-            System.Module_Registry()
-          </p>
 
           <h2 className="text-4xl font-black tracking-tight text-gray-950 lg:text-6xl">
             System Modules
@@ -229,7 +226,7 @@ export default function Projects(): React.JSX.Element {
                         href="#contact"
                         className="group/link inline-flex items-center gap-3 px-6 py-3 bg-white text-violet-700 border border-violet-200 rounded-2xl font-black text-[10px] tracking-[0.2em] transition-all hover:bg-violet-600 hover:text-white hover:border-violet-600 hover:-translate-y-1 shadow-sm"
                       >
-                        VIEW_RESOURCES
+                        View Details
                         <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
@@ -244,7 +241,7 @@ export default function Projects(): React.JSX.Element {
                     <div className="relative group/image">
                       <div className="absolute -inset-4 rounded-[2.5rem] bg-linear-to-br from-violet-200/50 to-cyan-100/50 opacity-0 blur-2xl transition duration-500 group-hover:opacity-100" />
 
-                      <div className="relative aspect-4/3 overflow-hidden rounded-[2rem] border border-gray-100 bg-white p-2 shadow-2xl shadow-gray-200/50">
+                      <div className="relative aspect-4/3 overflow-hidden rounded-4x1 border border-gray-100 bg-white p-2 shadow-2xl shadow-gray-200/50">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl">
                           {project.image ? (
                             <Image

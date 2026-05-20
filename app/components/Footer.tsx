@@ -6,9 +6,7 @@ export default function Footer(): React.JSX.Element {
     <footer id="contact" className="py-10 px-6 border-t border-gray-100 bg-gray-50/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <p className="mb-4 text-[10px] font-black uppercase tracking-[0.4em] text-violet-600">
-            System.Comm_Interface()
-          </p>
+        
           <h2 className="text-4xl lg:text-5xl font-black text-gray-950 mb-6">
             Contact
           </h2>

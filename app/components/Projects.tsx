@@ -21,17 +21,14 @@ const featuredProjects: Project[] = [
     description: "A web-based system for managing company policies, approval workflows, document tracking, audit history, archiving, role-based access, and dashboard monitoring.",
     tech: ["React TypeScript", "ASP.NET Core", "C#", "SQL", "REST API", "PDF Generation", "Email Integration"],
   },
-
   {
     id: 7,
     title: "Tenant Billing Management System",
     type: "Billing and Records Management System",
-    description:
-      "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
+    description: "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
     image: "/pics/tenant-billing.png",
     tech: ["React TypeScript", "ASP.NET Core", "C#", "SQL", "REST API"],
   },
-
   {
     id: 2,
     title: "Barangay Ugong Request Kiosk",
@@ -72,8 +69,6 @@ const featuredProjects: Project[] = [
     image: "/pics/POS.png",
     tech: ["C#", "Python", "SQL"],
   },
-
-    
 ];
 
 const fadeUp: Variants = {
@@ -136,9 +131,10 @@ const chipItem: Variants = {
 export default function Projects(): React.JSX.Element {
   return (
     <section id="lab" className="relative overflow-hidden bg-white px-6 py-28">
-      <div className="pointer-events-none absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-violet-100/80 blur-3xl" />
-      <div className="pointer-events-none absolute right-[-8%] top-1/2 h-80 w-80 rounded-full bg-cyan-100/70 blur-3xl" />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#f1f5f9_1px,transparent_1px),linear-gradient(to_bottom,#f1f5f9_1px,transparent_1px)] bg-size-[72px_72px]] opacity-40" />
+      {/* Background Accents */}
+      <div className="pointer-events-none absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-violet-100/40 blur-3xl" />
+      <div className="pointer-events-none absolute right-[-8%] top-1/2 h-80 w-80 rounded-full bg-cyan-100/30 blur-3xl" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-[size:40px_40px] opacity-40" />
 
       <div className="container relative z-10 mx-auto max-w-7xl">
         <motion.div
@@ -148,22 +144,20 @@ export default function Projects(): React.JSX.Element {
           viewport={{ once: true, amount: 0.45 }}
           className="mx-auto mb-24 max-w-3xl text-center"
         >
-          <p className="mb-4 text-sm font-black uppercase tracking-[0.35em] text-violet-600">
-            Selected Work
+          <p className="mb-4 text-[10px] font-black uppercase tracking-[0.4em] text-violet-600">
+            System.Module_Registry()
           </p>
 
           <h2 className="text-4xl font-black tracking-tight text-gray-950 lg:text-6xl">
-            Featured Projects
+            System Modules
           </h2>
 
-          <p className="mt-6 text-base leading-8 text-gray-600 lg:text-lg">
-            A focused collection of web systems, embedded dashboards, automation
-            tools, and database-driven applications built with practical use in
-            mind.
+          <p className="mt-6 text-lg leading-relaxed text-gray-600 font-medium">
+            A repository of functional systems, embedded dashboards, and automated infrastructures built to solve practical engineering challenges.
           </p>
         </motion.div>
 
-        <div className="space-y-28">
+        <div className="space-y-32">
           {featuredProjects.map((project, index) => {
             const isEven = index % 2 === 1;
             const projectNumber = String(index + 1).padStart(2, "0");
@@ -177,37 +171,36 @@ export default function Projects(): React.JSX.Element {
                 viewport={{ once: true, amount: 0.25 }}
                 className="group relative"
               >
-                <div className="absolute -inset-6 rounded-4x1 bg-linear-to-br from-violet-50 via-white to-cyan-50 opacity-0 shadow-2xl shadow-violet-100/40 transition duration-500 group-hover:opacity-100" />
+                <div className="absolute -inset-8 rounded-[3rem] bg-linear-to-br from-violet-50/50 via-white to-cyan-50/50 opacity-0 group-hover:opacity-100 transition duration-500 shadow-2xl shadow-violet-100/20" />
 
                 <div
-                  className={`relative grid grid-cols-1 items-center gap-8 lg:grid-cols-2 lg:gap-12 ${
+                  className={`relative grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16 ${
                     isEven ? "lg:grid-flow-dense" : ""
                   }`}
                 >
                   <div className={isEven ? "lg:col-start-2" : ""}>
-                    <div className="mb-5 flex items-center gap-4">
-                      <span className="rounded-full border border-violet-100 bg-white px-4 py-2 text-xs font-black tracking-[0.25em] text-violet-600 shadow-sm">
-                        {projectNumber}
+                    <div className="mb-6 flex items-center gap-4">
+                      <span className="rounded-xl border border-violet-100 bg-white px-3 py-1 text-[10px] font-black tracking-widest text-violet-600 shadow-sm">
+                        SYSTEM MODULE {projectNumber}
                       </span>
-
                       <div className="h-px flex-1 bg-linear-to-r from-violet-200 to-transparent" />
                     </div>
 
-                    <p className="mb-3 text-sm font-black uppercase tracking-[0.22em] text-violet-600">
+                    <p className="mb-2 text-[10px] font-black uppercase tracking-[0.2em] text-cyan-500">
                       {project.type}
                     </p>
 
-                    <h3 className="max-w-2xl text-3xl font-black tracking-tight text-gray-950 lg:text-5xl">
+                    <h3 className="text-3xl font-black tracking-tight text-gray-950 lg:text-5xl mb-8">
                       {project.title}
                     </h3>
 
-                    <div className="relative z-10 mt-8 mb-6">
+                    <div className="relative z-10 mb-8">
                       <div
-                        className={`rounded-3xl border border-gray-100 bg-white/90 p-6 shadow-2xl shadow-violet-100/40 backdrop-blur-md lg:p-8 ${
-                          isEven ? "lg:ml-[-20%]" : "lg:w-[calc(100%+20%)]"
+                        className={`rounded-3xl border border-gray-100 bg-white/80 p-6 lg:p-8 shadow-2xl shadow-violet-100/40 backdrop-blur-md ${
+                          isEven ? "lg:ml-[-25%]" : "lg:w-[calc(100%+25%)]"
                         }`}
                       >
-                        <p className="mb-6 text-base leading-relaxed text-gray-700 lg:text-lg">
+                        <p className="mb-8 text-base leading-relaxed text-gray-700 lg:text-lg font-medium">
                           {project.description}
                         </p>
 
@@ -222,7 +215,7 @@ export default function Projects(): React.JSX.Element {
                             <motion.span
                               key={tech}
                               variants={chipItem}
-                              className="rounded-full border border-gray-100 bg-gray-50 px-3 py-1.5 text-[10px] font-black uppercase tracking-wider text-gray-500 transition duration-300 hover:border-violet-200 hover:bg-violet-50 hover:text-violet-700"
+                              className="rounded-lg border border-gray-100 bg-gray-50 px-2.5 py-1.5 text-[9px] font-black uppercase tracking-widest text-gray-500 transition duration-300 group-hover:border-violet-200 group-hover:bg-white group-hover:text-violet-600"
                             >
                               {tech}
                             </motion.span>
@@ -234,62 +227,41 @@ export default function Projects(): React.JSX.Element {
                     <div className="flex gap-4">
                       <a
                         href="#contact"
-                        className="group/link inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-black text-gray-500 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-violet-200 hover:text-violet-600 hover:shadow-lg hover:shadow-violet-100"
+                        className="group/link inline-flex items-center gap-3 px-6 py-3 bg-slate-950 text-white rounded-2xl font-black text-[10px] tracking-[0.2em] transition-all hover:bg-violet-600 hover:-translate-y-1"
                       >
-                        <svg
-                          className="h-5 w-5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                          />
+                        VIEW_RESOURCES
+                        <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
-                        PROJECT DETAILS
                       </a>
                     </div>
                   </div>
 
                   <motion.div
                     variants={imageMotion}
-                    className={isEven ? "lg:col-start-1 lg:row-start-1" : ""}
+                    className={`relative ${isEven ? "lg:col-start-1 lg:row-start-1" : ""}`}
                   >
-                    <div className="relative">
-                      <div className="absolute -inset-3 rounded-4x1 bg-linear-to-br from-violet-200 via-cyan-100 to-white opacity-70 blur-xl transition duration-500 group-hover:opacity-100" />
+                    <div className="relative group/image">
+                      <div className="absolute -inset-4 rounded-[2.5rem] bg-linear-to-br from-violet-200/50 to-cyan-100/50 opacity-0 blur-2xl transition duration-500 group-hover:opacity-100" />
 
-                      <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl border border-gray-100 bg-white p-2 shadow-2xl shadow-gray-200/70 lg:p-3">
-                        <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-2xl bg-white">
+                      <div className="relative aspect-4/3 overflow-hidden rounded-[2rem] border border-gray-100 bg-white p-2 shadow-2xl shadow-gray-200/50">
+                        <div className="relative h-full w-full overflow-hidden rounded-2xl">
                           {project.image ? (
                             <Image
                               src={project.image}
                               alt={project.title}
                               fill
                               sizes="(max-width: 1024px) 100vw, 50vw"
-                              className="object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:saturate-125"
+                              className="object-cover transition duration-700 ease-out group-hover:scale-105 group-hover:saturate-110"
                             />
                           ) : (
-                            <div className="flex h-full w-full items-center justify-center bg-linear-to-br from-violet-50 via-white to-cyan-50">
-                              <svg
-                                className="h-20 w-20 text-violet-100"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth="1"
-                                  d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                />
+                            <div className="flex h-full w-full items-center justify-center bg-gray-50">
+                              <svg className="h-16 w-16 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                               </svg>
                             </div>
                           )}
-
-                          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-white/20 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+                          <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
                         </div>
                       </div>
                     </div>

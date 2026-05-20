@@ -6,12 +6,15 @@ export default function Footer(): React.JSX.Element {
     <footer id="contact" className="py-10 px-6 border-t border-gray-100 bg-gray-50/30">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <p className="mb-4 text-[10px] font-black uppercase tracking-[0.4em] text-violet-600">
+            System.Comm_Interface()
+          </p>
+          <h2 className="text-4xl lg:text-5xl font-black text-gray-950 mb-6">
             Contact
           </h2>
-          <p className="text-md text-gray-600 max-w-2xl mx-auto mb-8">
-            I am always interested in building clean, responsive, and practical web systems. 
-            Whether you have a project in mind or just want to connect, feel free to reach out!
+          <p className="text-md text-gray-600 max-w-2xl mx-auto mb-8 font-medium">
+            Interested in building functional digital infrastructures? 
+            Let&apos;s initialize a connection.
           </p>
           <a
             href="mailto:alejandramaraasin0@gmail.com"

@@ -51,12 +51,17 @@ const staggerParent: Variants = {
 
 export default function Banner(): React.JSX.Element {
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center pt-28 pb-20 px-6 bg-white"
-    >
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+   <section
+  id="home"
+  className="masthead-scroll-section relative min-h-screen overflow-hidden flex items-center justify-center pt-28 pb-20 px-6 bg-white"
+>
+  <div className="masthead-flying-squares" aria-hidden="true">
+  <span className="masthead-square" />
+  <span className="masthead-square" />
+  <span className="masthead-square" />
+</div>
+<div className="container relative z-10 mx-auto max-w-6xl">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           
           {/* Left side - Text content */}
             <motion.div
@@ -75,10 +80,10 @@ export default function Banner(): React.JSX.Element {
                 </p>
               </motion.div>
               
-            <motion.h1
-              variants={fadeUp}
-              className="text-4xl font-extrabold leading-tight text-gray-900 lg:text-5xl"
-            >
+           <motion.h1
+  variants={fadeUp}
+  className="masthead-title text-4xl font-extrabold leading-tight text-gray-900 lg:text-5xl"
+>
               Software and Web Developer focused on{" "}
               <span className="bg-linear-to-r from-violet-600 via-cyan-500 to-pink-500 bg-clip-text text-transparent">
                 practical, user-friendly

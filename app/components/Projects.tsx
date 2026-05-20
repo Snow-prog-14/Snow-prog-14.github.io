@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 
 interface Project {
   id: number;
+  slug: string;
   title: string;
   type: string;
   description: string;
@@ -15,6 +17,7 @@ interface Project {
 const featuredProjects: Project[] = [
   {
     id: 1,
+    slug: "policy-management",
     title: "Policy Management System",
     type: "Full-Stack Web Application",
     image: "/pics/policy.png",
@@ -23,6 +26,7 @@ const featuredProjects: Project[] = [
   },
   {
     id: 7,
+    slug: "tenant-billing",
     title: "Tenant Billing Management System",
     type: "Billing and Records Management System",
     description: "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
@@ -31,6 +35,7 @@ const featuredProjects: Project[] = [
   },
   {
     id: 2,
+    slug: "barangay-request-kiosk",
     title: "Barangay Ugong Request Kiosk",
     type: "Barangay Service Request System",
     description: "A web-based request kiosk interface for managing barangay service requests and providing residents with a more organized way to access local services.",
@@ -39,6 +44,7 @@ const featuredProjects: Project[] = [
   },
   {
     id: 3,
+    slug: "air-pollution-mini-bot",
     title: "Air Pollution AI Mini Bot",
     type: "Environmental Monitoring Interface",
     description: "A web interface for displaying real-time AQI and IAQ readings collected by an autonomous air pollution monitoring minibot.",
@@ -47,6 +53,7 @@ const featuredProjects: Project[] = [
   },
   {
     id: 4,
+    slug: "embedded-system-dashboard",
     title: "Embedded System Dashboard",
     type: "Sensor Monitoring Interface",
     description: "A dashboard interface for monitoring sensor outputs and system status updates from a Raspberry Pi-based embedded system.",
@@ -55,6 +62,7 @@ const featuredProjects: Project[] = [
   },
   {
     id: 5,
+    slug: "smart-locker-system",
     title: "Smart Locker System",
     type: "NFC-Based Access Control System",
     description: "A locker management system with user registration, authentication, NFC-based access control, and locker status monitoring.",
@@ -63,6 +71,7 @@ const featuredProjects: Project[] = [
   },
   {
     id: 6,
+    slug: "point-of-sale",
     title: "Point of Sale System",
     type: "Inventory and Sales System",
     description: "A POS system for transaction processing, inventory tracking, and sales reporting with database-connected records.",
@@ -134,7 +143,7 @@ export default function Projects(): React.JSX.Element {
       {/* Background Accents */}
       <div className="pointer-events-none absolute left-[-10%] top-20 h-72 w-72 rounded-full bg-violet-100/40 blur-3xl" />
       <div className="pointer-events-none absolute right-[-8%] top-1/2 h-80 w-80 rounded-full bg-cyan-100/30 blur-3xl" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-size-[40px_40px] opacity-40" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] bg-[size:40px_40px] opacity-40" />
 
       <div className="container relative z-10 mx-auto max-w-7xl">
         <motion.div
@@ -144,6 +153,9 @@ export default function Projects(): React.JSX.Element {
           viewport={{ once: false, amount: 0.45 }}
           className="mx-auto mb-24 max-w-3xl text-center"
         >
+          <p className="mb-4 text-[10px] font-black uppercase tracking-[0.4em] text-violet-600">
+            System.Module_Registry()
+          </p>
 
           <h2 className="text-4xl font-black tracking-tight text-gray-950 lg:text-6xl">
             System Modules
@@ -222,15 +234,15 @@ export default function Projects(): React.JSX.Element {
                     </div>
 
                     <div className="flex gap-4">
-                      <a
-                        href="#contact"
+                      <Link
+                        href={`/projects/${project.slug}`}
                         className="group/link inline-flex items-center gap-3 px-6 py-3 bg-white text-violet-700 border border-violet-200 rounded-2xl font-black text-[10px] tracking-[0.2em] transition-all hover:bg-violet-600 hover:text-white hover:border-violet-600 hover:-translate-y-1 shadow-sm"
                       >
                         View Details
                         <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -241,7 +253,7 @@ export default function Projects(): React.JSX.Element {
                     <div className="relative group/image">
                       <div className="absolute -inset-4 rounded-[2.5rem] bg-linear-to-br from-violet-200/50 to-cyan-100/50 opacity-0 blur-2xl transition duration-500 group-hover:opacity-100" />
 
-                      <div className="relative aspect-4/3 overflow-hidden rounded-4x1 border border-gray-100 bg-white p-2 shadow-2xl shadow-gray-200/50">
+                      <div className="relative aspect-4/3 overflow-hidden rounded-4xl border border-gray-100 bg-white p-2 shadow-2xl shadow-gray-200/50">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl">
                           {project.image ? (
                             <Image

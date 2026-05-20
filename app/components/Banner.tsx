@@ -1,7 +1,54 @@
 "use client";
 //saas
-import Image from "next/image";
-import { useState, useEffect } from "react";
+
+import { motion, type Variants } from "framer-motion";
+
+const fadeUp: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 34,
+    filter: "blur(8px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.7,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+const visualReveal: Variants = {
+  hidden: {
+    opacity: 0,
+    x: 44,
+    scale: 0.96,
+    filter: "blur(10px)",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.85,
+      ease: [0.22, 1, 0.36, 1],
+      delay: 0.25,
+    },
+  },
+};
+
+const staggerParent: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
 export default function Banner(): React.JSX.Element {
   return (
     <section
@@ -12,31 +59,47 @@ export default function Banner(): React.JSX.Element {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           
           {/* Left side - Text content */}
-          <div className="flex-1 space-y-8 text-center lg:text-left order-2 lg:order-1">
+            <motion.div
+              variants={staggerParent}
+              initial="hidden"
+              animate="visible"
+              className="order-2 flex-1 space-y-8 text-center lg:order-1 lg:text-left"
+            >            
             <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 border border-violet-100">
-                <span className="w-2 h-2 rounded-full bg-violet-400"></span>
+<motion.div
+  variants={fadeUp}
+  className="inline-flex items-center gap-2 rounded-full border border-violet-100 bg-violet-50 px-3 py-1"
+>                <span className="w-2 h-2 rounded-full bg-violet-400"></span>
                 <p className="text-xs font-bold text-violet-600 uppercase tracking-widest">
                   Hello! I&apos;m Alejandra Maraasin
                 </p>
-              </div>
+              </motion.div>
               
-              <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
-                Software and Web Developer focused on{" "}
-                <span className="bg-linear-to-r from-violet-600 via-cyan-500 to-pink-500 bg-clip-text text-transparent">
-                  practical, user-friendly
-                </span>{" "}
-                systems.
-              </h1>
+            <motion.h1
+              variants={fadeUp}
+              className="text-4xl font-extrabold leading-tight text-gray-900 lg:text-5xl"
+            >
+              Software and Web Developer focused on{" "}
+              <span className="bg-linear-to-r from-violet-600 via-cyan-500 to-pink-500 bg-clip-text text-transparent">
+                practical, user-friendly
+              </span>{" "}
+              systems.
+            </motion.h1>
 
-              <p className="text-lg text-gray-500 max-w-2xl leading-relaxed">
-                I build responsive web applications and software projects with clean interfaces, organized workflows, and a focus on usability.
-              </p>
+           <motion.p
+            variants={fadeUp}
+            className="max-w-2xl text-lg leading-relaxed text-gray-500"
+          >
+            I build responsive web applications and software projects with clean
+            interfaces, organized workflows, and a focus on usability.
+          </motion.p>
             </div>
 
             <div className="space-y-4">
-              <div className=" items-center justify-center lg:justify-start gap-3 p-4 rounded-2xl bg-gray-50 border border-gray-100 inline-flex">
-                <div className="w-10 h-10 rounded-xl bg-white border border-gray-100 flex items-center justify-center shadow-sm">
+<motion.div
+  variants={fadeUp}
+  className="inline-flex items-center justify-center gap-3 rounded-2xl border border-gray-100 bg-gray-50 p-4 lg:justify-start"
+>                <div className="w-10 h-10 rounded-xl bg-white border border-gray-100 flex items-center justify-center shadow-sm">
                   <svg className="w-5 h-5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
@@ -44,11 +107,13 @@ export default function Banner(): React.JSX.Element {
                 <p className="text-sm font-medium text-gray-700">
                   Completed a <span className="font-bold text-gray-900">300-hour Full-Stack Developer Internship</span> at TAO Corporation.
                 </p>
-              </div>
+              </motion.div>
             </div>
 
-         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-  <a
+<motion.div
+  variants={fadeUp}
+  className="flex flex-col justify-center gap-4 pt-4 sm:flex-row lg:justify-start"
+>  <a
     href="#lab"
     style={{ color: "#ffffff" }}
 className="inline-flex items-center justify-center min-w-[150px] px-8 py-4 rounded-2xl bg-slate-950 text-white font-bold text-center shadow-xl shadow-slate-200 transition-all hover:bg-slate-800 hover:-translate-y-1"  >
@@ -63,15 +128,18 @@ className="inline-flex items-center justify-center min-w-[150px] px-8 py-4 round
   >
     View Resume
   </a>
-</div>
-          </div>
+</motion.div>
+          </motion.div>
 
           {/* Right side - CSS Mockup Visual */}
-          <div className="flex-1 w-full max-w-xl order-1 lg:order-2">
-            <div className="relative">
+<motion.div
+  variants={visualReveal}
+  initial="hidden"
+  animate="visible"
+  className="order-1 w-full max-w-xl flex-1 lg:order-2"
+>            <div className="relative">
               {/* Decorative Glow */}
-              <div className="absolute -inset-4b g-linear-to-r from-violet-100/50 via-cyan-100/50 to-pink-100/50 rounded-[3rem] blur-2xl opacity-50"></div>
-              
+<div className="absolute -inset-4 rounded-[3rem] bg-linear-to-r from-violet-100/50 via-cyan-100/50 to-pink-100/50 opacity-50 blur-2xl" />              
               {/* CSS Browser Mockup */}
               <div className="relative bg-white rounded-[2.5rem] border border-gray-100 shadow-2xl overflow-hidden p-1 bg-linear-to-br from-gray-50 to-white">
                 <div className="bg-white rounded-[2.2rem] overflow-hidden border border-gray-50">
@@ -143,7 +211,7 @@ className="inline-flex items-center justify-center min-w-[150px] px-8 py-4 round
                 </svg>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

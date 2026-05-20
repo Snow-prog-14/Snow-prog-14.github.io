@@ -50,7 +50,7 @@ export default function Experience(): React.JSX.Element {
               className="bg-white backdrop-blur-sm rounded-xl p-6 border-t-4 border-violet-400 hover:shadow-xl hover:shadow-violet-100 transition-all flex flex-col gap-4"
             >
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 flex-shrink-0">
+                <div className="w-12 h-12 shrink-0">
                   <Image
                     src={card.icon}
                     alt={card.title}

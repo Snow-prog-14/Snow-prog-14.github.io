@@ -141,7 +141,7 @@ export default function Projects(): React.JSX.Element {
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.45 }}
+          viewport={{ once: false, amount: 0.45 }}
           className="mx-auto mb-24 max-w-3xl text-center"
         >
           <p className="mb-4 text-[10px] font-black uppercase tracking-[0.4em] text-violet-600">
@@ -168,7 +168,7 @@ export default function Projects(): React.JSX.Element {
                 variants={fadeUp}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, amount: 0.25 }}
+                viewport={{ once: false, amount: 0.25 }}
                 className="group relative"
               >
                 <div className="absolute -inset-8 rounded-[3rem] bg-linear-to-br from-violet-50/50 via-white to-cyan-50/50 opacity-0 group-hover:opacity-100 transition duration-500 shadow-2xl shadow-violet-100/20" />
@@ -208,7 +208,7 @@ export default function Projects(): React.JSX.Element {
                           variants={chipContainer}
                           initial="hidden"
                           whileInView="visible"
-                          viewport={{ once: true, amount: 0.5 }}
+                          viewport={{ once: false, amount: 0.5 }}
                           className="flex flex-wrap gap-2"
                         >
                           {project.tech.map((tech) => (

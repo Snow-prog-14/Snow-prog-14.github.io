@@ -84,7 +84,7 @@ const technicalAreas = [
     description: "Developing automated workflows and kiosk systems for improved organizational efficiency.",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.691.31a2 2 0 00-1.002 1.183l-.531 1.702a2 2 0 01-1.161 1.412l-1.42.53a2 2 0 01-2.484-1.127l-1.062-2.124a2 2 0 00-1.022-.96l-2.124-1.062a2 2 0 01-1.127-2.484l.53-1.42a2 2 0 011.412-1.161l1.702-.531a2 2 0 001.183-1.002l.31-.691a6 6 0 00.517-3.86l-.477-2.387a2 2 0 00-.547-1.022L6.572 1.572a2 2 0 011.127 2.484l1.062 2.124a2 2 0 001.022.96l2.124 1.062a2 2 0 011.127 2.484l-.53 1.42a2 2 0 01-1.412 1.161l-1.702.531a2 2 0 00-1.183 1.002l-.31.691a6 6 0 00-.517 3.86l.477 2.387a2 2 0 00.547 1.022l1.428 1.428z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.691.31a2 2 0 00-1.002 1.183l-.531 1.702a2 2 0 01-1.161 1.412l-1.42.53a2 2 0 01-2.484-1.127l-1.062-2.124a2 2 0 00-1.022-.96l-2.124-1.062a2 2 0 01-1.127-2.484l.53-1.42a2 2 0 011.412-1.161l1.702-.531a2 2 0 001.183-1.002l.31-.691a6 6 0 00.517-3.86l-.477-2.387a2 2 0 00-.547-1.022L6.572 1.572a2 2 0 011.127 2.484l1.062 2.124a2 2 0 001.022.96l2.124 1.062a2 2 0 011.127 2.484l-.53 1.42a2 2 0 01-1.412 1.161l-1.702.531a2 2 0 00-1.183 1.002l-.31.691a6 6 0 00-.517-3.86l.477-2.387a2 2 0 00.547-1.022l1.428 1.428z" />
       </svg>
     ),
     accent: "text-blue-400 border-blue-500/30 bg-blue-500/10",
@@ -92,9 +92,52 @@ const technicalAreas = [
   }
 ];
 
-const skillTags = [
-  "React", "TypeScript", "ASP.NET Core", "C#", "SQL", "Python", 
-  "C++", "Raspberry Pi", "Arduino", "UI/UX", "REST API", "Git"
+const capabilityModules = [
+  {
+    code: "UI_LAYER",
+    label: "Frontend Interface",
+    number: "01",
+    skills: ["React", "TypeScript", "UI/UX"],
+    color: "text-violet-400 border-violet-500/20 bg-violet-500/5",
+    glow: "group-hover:border-violet-500/50 group-hover:shadow-[0_0_15px_rgba(139,92,246,0.2)]",
+    bars: [100, 80, 90]
+  },
+  {
+    code: "API_CORE",
+    label: "Backend Systems",
+    number: "02",
+    skills: ["ASP.NET Core", "C#", "REST API"],
+    color: "text-cyan-400 border-cyan-500/20 bg-cyan-500/5",
+    glow: "group-hover:border-cyan-500/50 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.2)]",
+    bars: [90, 85, 95]
+  },
+  {
+    code: "DATA_NODE",
+    label: "Data Operations",
+    number: "03",
+    skills: ["SQL", "Python"],
+    color: "text-pink-400 border-pink-500/20 bg-pink-500/5",
+    glow: "group-hover:border-pink-500/50 group-hover:shadow-[0_0_15px_rgba(236,72,153,0.2)]",
+    bars: [85, 75, 80]
+  },
+  {
+    code: "EMBEDDED_IO",
+    label: "Hardware Integration",
+    number: "04",
+    skills: ["Raspberry Pi", "Arduino", "C++"],
+    color: "text-amber-400 border-amber-500/20 bg-amber-500/5",
+    glow: "group-hover:border-amber-500/50 group-hover:shadow-[0_0_15px_rgba(245,158,11,0.2)]",
+    bars: [70, 90, 85]
+  },
+  {
+    code: "DEPLOYMENT",
+    label: "Version Control",
+    number: "05",
+    skills: ["Git"],
+    color: "text-blue-400 border-blue-500/20 bg-blue-500/5",
+    glow: "group-hover:border-blue-500/50 group-hover:shadow-[0_0_15px_rgba(59,130,246,0.2)]",
+    bars: [95, 90, 85]
+  }
 ];
 
 export default function TechnicalDirections(): React.JSX.Element {
@@ -112,7 +155,7 @@ export default function TechnicalDirections(): React.JSX.Element {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
           >
             <h2 className="text-sm font-black uppercase tracking-[0.4em] text-cyan-400 mb-4">
               System.Signal_Map()
@@ -127,7 +170,7 @@ export default function TechnicalDirections(): React.JSX.Element {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {technicalAreas.map((area) => (
@@ -152,27 +195,86 @@ export default function TechnicalDirections(): React.JSX.Element {
           ))}
         </motion.div>
 
-        {/* Technical Skillset Overlay */}
+        {/* Capability Console / Subsystem Matrix */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
-          className="mt-20 p-8 rounded-3xl border border-slate-800 bg-slate-900/50 backdrop-blur-md"
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-20 p-1 bg-slate-900/40 rounded-[2.5rem] border border-slate-800 relative overflow-hidden group/console"
         >
-          <h4 className="text-xs font-black text-cyan-400 uppercase tracking-widest mb-6 flex items-center gap-3">
-            <span className="w-8 h-px bg-cyan-400/30"></span>
-            Subsystem_Capabilities
-          </h4>
-          <div className="flex flex-wrap gap-3">
-            {skillTags.map((skill) => (
-              <span 
-                key={skill}
-                className="px-4 py-2 rounded-xl bg-slate-800 border border-slate-700 text-xs font-bold text-slate-300 hover:border-cyan-500/50 hover:text-cyan-400 transition-all cursor-default"
-              >
-                {skill}
-              </span>
-            ))}
+          {/* Console Grid Overlay */}
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[size:20px_20px] bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)]" />
+          
+          <div className="relative z-10 p-8 lg:p-10">
+            {/* Console Header */}
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12 border-b border-slate-800 pb-8">
+              <div className="flex items-center gap-4">
+                <div className="relative">
+                  <div className="w-3 h-3 rounded-full bg-emerald-500 animate-pulse" />
+                  <div className="absolute inset-0 w-3 h-3 rounded-full bg-emerald-500 blur-sm opacity-50" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-black text-cyan-500 uppercase tracking-[0.3em] mb-1">SUBSYSTEM_CAPABILITIES</p>
+                  <h4 className="text-xl font-black text-white uppercase tracking-tight">Active technical stack modules</h4>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 px-4 py-2 bg-slate-950/50 rounded-xl border border-slate-800 shadow-inner">
+                <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">STATUS:</span>
+                <span className="text-[10px] font-black text-emerald-400 uppercase tracking-[0.2em] animate-pulse">ONLINE</span>
+              </div>
+            </div>
+
+            {/* Capability Modules Grid */}
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false }}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"
+            >
+              {capabilityModules.map((module) => (
+                <motion.div
+                  key={module.code}
+                  variants={nodeVariants}
+                  className={`group relative p-6 rounded-2xl border transition-all duration-300 ${module.color} ${module.glow}`}
+                >
+                  <div className="flex justify-between items-start mb-6">
+                    <span className="text-[9px] font-black text-slate-500 uppercase tracking-widest">{module.number}</span>
+                    <div className="flex gap-0.5 items-end h-4">
+                      {module.bars.map((height, i) => (
+                        <motion.div 
+                          key={i}
+                          initial={{ height: 2 }}
+                          whileInView={{ height: `${height / 6}%` }}
+                          transition={{ repeat: Infinity, repeatType: "reverse", duration: 1 + i * 0.2 }}
+                          className={`w-1 rounded-full ${module.color.split(' ')[0]} opacity-40 group-hover:opacity-100 transition-opacity`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <p className={`text-[8px] font-black uppercase tracking-[0.2em] mb-1 ${module.color.split(' ')[0]}`}>{module.code}</p>
+                    <h5 className="text-xs font-black text-white uppercase tracking-wider group-hover:scale-105 origin-left transition-transform">{module.label}</h5>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {module.skills.map((skill) => (
+                      <span 
+                        key={skill}
+                        className="text-[9px] font-bold text-slate-400 group-hover:text-white transition-colors"
+                      >
+                        {skill}{skill !== module.skills[module.skills.length - 1] ? " // " : ""}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Corner Accent */}
+                  <div className="absolute top-2 right-2 w-1.5 h-1.5 border-t border-r border-slate-700 rounded-tr-sm group-hover:border-cyan-500 transition-colors" />
+                </motion.div>
+              ))}
+            </motion.div>
           </div>
         </motion.div>
       </div>

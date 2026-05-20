@@ -48,7 +48,7 @@ export default function About(): React.JSX.Element {
         <motion.div 
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           variants={containerVariants}
           className="flex flex-col items-center"
         >

@@ -112,7 +112,7 @@ export default function Experience(): React.JSX.Element {
                   key={entry.id}
                   initial="hidden"
                   whileInView="visible"
-                  viewport={{ once: true, amount: 0.5 }}
+                  viewport={{ once: false, amount: 0.5 }}
                   variants={entryVariants}
                   className={`relative flex flex-col md:flex-row items-center gap-8 ${isEven ? 'md:flex-row-reverse' : ''}`}
                 >

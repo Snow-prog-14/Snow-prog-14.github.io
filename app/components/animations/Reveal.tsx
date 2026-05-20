@@ -18,7 +18,7 @@ export default function Reveal({
   delay = 0,
   direction = "up",
   amount = 0.25,
-  once = true,
+  once = false,
 }: RevealProps): React.JSX.Element {
   const distance = 34;
 

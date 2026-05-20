@@ -18,6 +18,17 @@ const featuredProjects: Project[] = [
     description: "A web-based system for managing company policies, approval workflows, document tracking, audit history, archiving, role-based access, and dashboard monitoring.",
     tech: ["React TypeScript", "ASP.NET Core", "C#", "SQL", "REST API", "PDF Generation", "Email Integration"],
   },
+
+  {
+    id: 7,
+    title: "Tenant Billing Management System",
+    type: "Billing and Records Management System",
+    description:
+      "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
+    image: "/pics/tenant-billing.png",
+    tech: ["React TypeScript", "ASP.NET Core", "C#", "SQL", "REST API"],
+  },
+  
   {
     id: 2,
     title: "Barangay Ugong Request Kiosk",
@@ -58,6 +69,8 @@ const featuredProjects: Project[] = [
     image: "/pics/POS.png",
     tech: ["C#", "Python", "SQL"],
   },
+
+    
 ];
 
 export default function Projects(): React.JSX.Element {
@@ -118,7 +131,7 @@ export default function Projects(): React.JSX.Element {
 
                 {/* Image Content */}
                 <div className={`${isEven ? "lg:col-start-1 lg:row-start-1" : ""}`}>
-                  <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-gray-50 p-2 lg:p-3 shadow-2xl shadow-gray-200/50 border border-gray-100">
+                  <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden bg-gray-50 p-2 lg:p-3 shadow-2xl shadow-gray-200/50 border border-gray-100">
                     <div className="relative w-full h-full rounded-2xl overflow-hidden bg-white flex items-center justify-center">
                       {project.image ? (
                         <Image
@@ -129,7 +142,7 @@ export default function Projects(): React.JSX.Element {
                           className="object-cover transition-transform duration-700 hover:scale-105"
                         />
                       ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-violet-50 via-white to-cyan-50 flex items-center justify-center">
+                        <div className="w-full h-full bg-linear-to-br from-violet-50 via-white to-cyan-50 flex items-center justify-center">
                            <svg className="w-20 h-20 text-violet-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                            </svg>

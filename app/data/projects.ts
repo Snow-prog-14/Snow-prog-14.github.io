@@ -80,13 +80,21 @@ export const projects: ProjectDetail[] = [
     title: "Tenant Billing Management System",
     type: "Billing and Records Management System",
     status: "Completed",
-    year: "2026",
+    year: "2025",
     description:
       "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
     overview:
       "This project helps organize rental billing operations by managing tenant information, billing records, monthly charges, payment status, and reports. It was designed to make rental payment tracking easier and more structured.",
-    cover: "/pics/tenant-billing.png",
-    screenshots: [],
+    cover: "/projects/tenant-billing/landing page.png",
+    screenshots: [
+      "/projects/tenant-billing/landing page.png",
+      "/projects/tenant-billing/rent.png",
+      "/projects/tenant-billing/tenants.png",
+      "/projects/tenant-billing/tenant details.png",
+      "/projects/tenant-billing/tenant records.png",
+      "/projects/tenant-billing/utility.png",
+      "/projects/tenant-billing/settings.png",
+    ],
     tech: ["React TypeScript", "ASP.NET Core", "C#", "SQL", "REST API"],
     features: [
       "Tenant record management",

@@ -87,9 +87,7 @@ export default function Experience(): React.JSX.Element {
     <section id="experience" className="py-24 px-6 bg-gray-50/30 overflow-hidden">
       <div className="container mx-auto max-w-4xl" ref={containerRef}>
         <div className="text-center mb-20">
-          <h2 className="text-sm font-black uppercase tracking-[0.3em] text-violet-600 mb-4">
-            System.Activity_Log()
-          </h2>
+       
           <h3 className="text-4xl lg:text-5xl font-black text-gray-950 tracking-tight">
             Work Experience
           </h3>

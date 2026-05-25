@@ -157,9 +157,7 @@ export default function TechnicalDirections(): React.JSX.Element {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
           >
-            <h2 className="text-sm font-black uppercase tracking-[0.4em] text-cyan-400 mb-4">
-              System.Signal_Map()
-            </h2>
+         
             <h3 className="text-4xl lg:text-5xl font-black text-white tracking-tight">
               Technical Directions
             </h3>
@@ -215,7 +213,7 @@ export default function TechnicalDirections(): React.JSX.Element {
                   <div className="absolute inset-0 w-3 h-3 rounded-full bg-emerald-500 blur-sm opacity-50" />
                 </div>
                 <div>
-                  <p className="text-[10px] font-black text-cyan-500 uppercase tracking-[0.3em] mb-1">SUBSYSTEM_CAPABILITIES</p>
+                  <p className="text-[10px] font-black text-cyan-500 uppercase tracking-[0.3em] mb-1">SUBSYSTEM CAPABILITIES</p>
                   <h4 className="text-xl font-black text-white uppercase tracking-tight">Active technical stack modules</h4>
                 </div>
               </div>

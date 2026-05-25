@@ -12,6 +12,7 @@ export type ProjectDetail = {
   tech: string[];
   features: string[];
   role: string;
+  repository?: string;
 };
 
 export const projects: ProjectDetail[] = [
@@ -21,35 +22,37 @@ export const projects: ProjectDetail[] = [
     title: "Policy Management System",
     type: "Full-Stack Web Application",
     status: "Completed",
-    year: "2025",
+    year: "2026",
     description:
       "A web-based system for managing company policies, approval workflows, document tracking, audit history, archiving, role-based access, and dashboard monitoring.",
     overview:
       "This system was developed during my internship at TAO Corporation to help organize policy creation, review, approval, archiving, and monitoring. It includes workflow-based modules, dashboard tracking, backend services, PDF generation, and email notification support.",
+    repository: "https://github.com/rpdaliva090680/PolicyReactTS",
     cover: "/projects/policy-management/landing page.jpg",
     screenshots: [
-      "/projects/policy-management/approved.jpg",
+      "/projects/policy-management/login.jpg",
+      "/projects/policy-management/landing page.jpg",
+      "/projects/policy-management/system logs.jpg",
+      "/projects/policy-management/users.jpg",
+      "/projects/policy-management/create user.jpg",
       "/projects/policy-management/archived user.jpg",
       "/projects/policy-management/create draft.jpg",
-      "/projects/policy-management/create user.jpg",
+      "/projects/policy-management/masterlist.jpg",
+      "/projects/policy-management/approved.jpg",
+      "/projects/policy-management/posted preview.jpg",
+      "/projects/policy-management/void.jpg",
+      "/projects/policy-management/email.jpg",
+      "/projects/policy-management/email template.jpg",
       "/projects/policy-management/create.jpg",
       "/projects/policy-management/drafts.jpg",
       "/projects/policy-management/edit user.jpg",
       "/projects/policy-management/edit.jpg",
-      "/projects/policy-management/email template.jpg",
-      "/projects/policy-management/email.jpg",
       "/projects/policy-management/for approval.jpg",
       "/projects/policy-management/for review.jpg",
-      "/projects/policy-management/login.jpg",
-      "/projects/policy-management/masterlist.jpg",
       "/projects/policy-management/policy.jpg",
-      "/projects/policy-management/posted preview.jpg",
       "/projects/policy-management/posted.jpg",
       "/projects/policy-management/posting.jpg",
       "/projects/policy-management/request preview.jpg",
-      "/projects/policy-management/system logs.jpg",
-      "/projects/policy-management/users.jpg",
-      "/projects/policy-management/void.jpg",
     ],
     tech: [
       "React TypeScript",
@@ -77,7 +80,7 @@ export const projects: ProjectDetail[] = [
     title: "Tenant Billing Management System",
     type: "Billing and Records Management System",
     status: "Completed",
-    year: "2025",
+    year: "2026",
     description:
       "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
     overview:

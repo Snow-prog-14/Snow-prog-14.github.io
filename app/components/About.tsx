@@ -53,9 +53,7 @@ export default function About(): React.JSX.Element {
           className="flex flex-col items-center"
         >
           <motion.div variants={fadeUp} className="text-center mb-16">
-            <h2 className="text-sm font-black uppercase tracking-[0.3em] text-violet-600 mb-4">
-              System.Identity_Init()
-            </h2>
+         
             <h3 className="text-4xl lg:text-5xl font-black text-gray-950 tracking-tight">
               Identity Scan
             </h3>
@@ -110,7 +108,6 @@ export default function About(): React.JSX.Element {
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-50 border border-violet-100">
                   <span className="w-1.5 h-1.5 rounded-full bg-violet-500"></span>
-                  <span className="text-[10px] font-black text-violet-600 uppercase tracking-widest">Core_Objectives.log</span>
                 </div>
                 
                 <p className="text-xl text-gray-800 leading-relaxed font-semibold">
@@ -148,7 +145,7 @@ export default function About(): React.JSX.Element {
 
                 <div className="pt-4">
                   <a href="#contact" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-violet-600 text-white rounded-2xl font-black text-sm tracking-widest overflow-hidden transition-all hover:bg-violet-700 shadow-xl shadow-violet-200 hover:-translate-y-1">
-                    <span className="relative z-10">INITIALIZE_CONNECTION</span>
+                    <span className="relative z-10">INITIALIZE CONNECTION</span>
                     <svg className="w-4 h-4 relative z-10 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>

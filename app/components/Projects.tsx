@@ -154,9 +154,7 @@ export default function Projects(): React.JSX.Element {
           viewport={{ once: false, amount: 0.45 }}
           className="mx-auto mb-24 max-w-3xl text-center"
         >
-          <p className="mb-4 text-[10px] font-black uppercase tracking-[0.4em] text-violet-600">
-            System.Module_Registry()
-          </p>
+       
 
           <h2 className="text-4xl font-black tracking-tight text-gray-950 lg:text-6xl">
             System Modules

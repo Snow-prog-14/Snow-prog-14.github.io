@@ -125,11 +125,11 @@ export default function Banner(): React.JSX.Element {
               >                
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">System_Ready</span>
+                  <span className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">System Ready</span>
                 </span>
                 <div className="w-px h-3 bg-violet-200"></div>
                 <p className="text-[10px] font-black text-violet-600 uppercase tracking-[0.2em]">
-                  Alejandra Maraasin // PORTFOLIO_INIT
+                  Alejandra Maraasin
                 </p>
               </motion.div>
               

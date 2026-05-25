@@ -10,7 +10,7 @@ interface Project {
   title: string;
   type: string;
   description: string;
-  image?: string;
+  cover?: string;
   tech: string[];
 }
 
@@ -20,7 +20,7 @@ const featuredProjects: Project[] = [
     slug: "policy-management",
     title: "Policy Management System",
     type: "Full-Stack Web Application",
-    image: "/pics/policy.png",
+    cover: "/pics/policy.png",
     description: "A web-based system for managing company policies, approval workflows, document tracking, audit history, archiving, role-based access, and dashboard monitoring.",
     tech: ["React TypeScript", "ASP.NET Core", "C#", "SQL", "REST API", "PDF Generation", "Email Integration"],
   },
@@ -31,7 +31,7 @@ const featuredProjects: Project[] = [
     type: "Billing and Records Management System",
     description:
       "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
-    image: "/pics/tenant-billing.png",
+    cover: "/pics/tenant-billing.png",
     tech: ["React TypeScript", "ASP.NET Core", "C#", "SQL", "REST API"],
   },
   {
@@ -40,7 +40,7 @@ const featuredProjects: Project[] = [
     title: "Barangay Ugong Request Kiosk",
     type: "Barangay Service Request System",
     description: "A web-based request kiosk interface for managing barangay service requests and providing residents with a more organized way to access local services.",
-    image: "/pics/brgyadmin.png",
+    cover: "/pics/brgyadmin.png",
     tech: ["HTML", "CSS", "JavaScript", "Python"],
   },
   {
@@ -49,7 +49,7 @@ const featuredProjects: Project[] = [
     title: "Air Pollution AI Mini Bot",
     type: "Environmental Monitoring Interface",
     description: "A web interface for displaying real-time AQI and IAQ readings collected by an autonomous air pollution monitoring minibot.",
-    image: "/pics/air pol mini bot.png",
+    cover: "/pics/air pol mini bot.png",
     tech: ["Python", "HTML", "SQL"],
   },
   {
@@ -58,7 +58,7 @@ const featuredProjects: Project[] = [
     title: "Embedded System Dashboard",
     type: "Sensor Monitoring Interface",
     description: "A dashboard interface for monitoring sensor outputs and system status updates from a Raspberry Pi-based embedded system.",
-    image: "/pics/embedded-dashboard.png",
+    cover: "/pics/embedded-dashboard.png",
     tech: ["Python", "HTML", "SQL", "Raspberry Pi"],
   },
   {
@@ -67,7 +67,7 @@ const featuredProjects: Project[] = [
     title: "Smart Locker System",
     type: "NFC-Based Access Control System",
     description: "A locker management system with user registration, authentication, NFC-based access control, and locker status monitoring.",
-    image: "/pics/locker.png",
+    cover: "/pics/locker.png",
     tech: ["C++", "Python", "HTML", "SQL", "Arduino", "Raspberry Pi"],
   },
   {
@@ -76,7 +76,7 @@ const featuredProjects: Project[] = [
     title: "Point of Sale System",
     type: "Inventory and Sales System",
     description: "A POS system for transaction processing, inventory tracking, and sales reporting with database-connected records.",
-    image: "/pics/POS.png",
+    cover: "/pics/POS.png",
     tech: ["C#", "Python", "SQL"],
   },
 ];
@@ -257,9 +257,9 @@ export default function Projects(): React.JSX.Element {
 
                       <div className="relative aspect-4/3 overflow-hidden rounded-4xl border border-gray-100 bg-white p-2 shadow-2xl shadow-gray-200/50">
                         <div className="relative h-full w-full overflow-hidden rounded-2xl">
-                          {project.image ? (
+                          {project.cover ? (
                             <Image
-                              src={project.image}
+                              src={project.cover}
                               alt={project.title}
                               fill
                               sizes="(max-width: 1024px) 100vw, 50vw"

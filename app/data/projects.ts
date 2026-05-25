@@ -7,8 +7,8 @@ export type ProjectDetail = {
   year: string;
   description: string;
   overview: string;
-  image: string;
-  gallery: string[];
+  cover: string;
+  screenshots: string[];
   tech: string[];
   features: string[];
   role: string;
@@ -26,11 +26,30 @@ export const projects: ProjectDetail[] = [
       "A web-based system for managing company policies, approval workflows, document tracking, audit history, archiving, role-based access, and dashboard monitoring.",
     overview:
       "This system was developed during my internship at TAO Corporation to help organize policy creation, review, approval, archiving, and monitoring. It includes workflow-based modules, dashboard tracking, backend services, PDF generation, and email notification support.",
-    image: "/projects/policy-management/cover.png",
-    gallery: [
-      "/projects/policy-management/screenshot-1.png",
-      "/projects/policy-management/screenshot-2.png",
-      "/projects/policy-management/screenshot-3.png",
+    cover: "/projects/policy-management/landing page.jpg",
+    screenshots: [
+      "/projects/policy-management/approved.jpg",
+      "/projects/policy-management/archived user.jpg",
+      "/projects/policy-management/create draft.jpg",
+      "/projects/policy-management/create user.jpg",
+      "/projects/policy-management/create.jpg",
+      "/projects/policy-management/drafts.jpg",
+      "/projects/policy-management/edit user.jpg",
+      "/projects/policy-management/edit.jpg",
+      "/projects/policy-management/email template.jpg",
+      "/projects/policy-management/email.jpg",
+      "/projects/policy-management/for approval.jpg",
+      "/projects/policy-management/for review.jpg",
+      "/projects/policy-management/login.jpg",
+      "/projects/policy-management/masterlist.jpg",
+      "/projects/policy-management/policy.jpg",
+      "/projects/policy-management/posted preview.jpg",
+      "/projects/policy-management/posted.jpg",
+      "/projects/policy-management/posting.jpg",
+      "/projects/policy-management/request preview.jpg",
+      "/projects/policy-management/system logs.jpg",
+      "/projects/policy-management/users.jpg",
+      "/projects/policy-management/void.jpg",
     ],
     tech: [
       "React TypeScript",
@@ -63,12 +82,8 @@ export const projects: ProjectDetail[] = [
       "A tenant billing system for managing tenant records, monthly rent, utility charges, payment tracking, billing history, and organized reports for rental property management.",
     overview:
       "This project helps organize rental billing operations by managing tenant information, billing records, monthly charges, payment status, and reports. It was designed to make rental payment tracking easier and more structured.",
-    image: "/projects/tenant-billing/cover.png",
-    gallery: [
-      "/projects/tenant-billing/screenshot-1.png",
-      "/projects/tenant-billing/screenshot-2.png",
-      "/projects/tenant-billing/screenshot-3.png",
-    ],
+    cover: "/pics/tenant-billing.png",
+    screenshots: [],
     tech: ["React TypeScript", "ASP.NET Core", "C#", "SQL", "REST API"],
     features: [
       "Tenant record management",
@@ -91,11 +106,8 @@ export const projects: ProjectDetail[] = [
       "A web-based request kiosk interface for managing barangay service requests and providing residents with a more organized way to access local services.",
     overview:
       "A kiosk-style service request system built to help residents submit and manage barangay service requests through a more structured interface.",
-    image: "/projects/barangay-request-kiosk/cover.png",
-    gallery: [
-      "/projects/barangay-request-kiosk/screenshot-1.png",
-      "/projects/barangay-request-kiosk/screenshot-2.png",
-    ],
+    cover: "/pics/brgyadmin.png",
+    screenshots: [],
     tech: ["HTML", "CSS", "JavaScript", "Python"],
     features: [
       "Service request interface",
@@ -116,11 +128,8 @@ export const projects: ProjectDetail[] = [
       "A web interface for displaying real-time AQI and IAQ readings collected by an autonomous air pollution monitoring minibot.",
     overview:
       "An environmental monitoring interface that displays air quality readings from a mini bot system, helping visualize AQI and IAQ data.",
-    image: "/projects/air-pollution-mini-bot/cover.png",
-    gallery: [
-      "/projects/air-pollution-mini-bot/screenshot-1.png",
-      "/projects/air-pollution-mini-bot/screenshot-2.png",
-    ],
+    cover: "/pics/air pol mini bot.png",
+    screenshots: [],
     tech: ["Python", "HTML", "SQL"],
     features: [
       "AQI and IAQ display",
@@ -141,11 +150,8 @@ export const projects: ProjectDetail[] = [
       "A dashboard interface for monitoring sensor outputs and system status updates from a Raspberry Pi-based embedded system.",
     overview:
       "A monitoring dashboard created to display sensor values and system status from an embedded Raspberry Pi setup.",
-    image: "/projects/embedded-system-dashboard/cover.png",
-    gallery: [
-      "/projects/embedded-system-dashboard/screenshot-1.png",
-      "/projects/embedded-system-dashboard/screenshot-2.png",
-    ],
+    cover: "/pics/embedded-dashboard.png",
+    screenshots: [],
     tech: ["Python", "HTML", "SQL", "Raspberry Pi"],
     features: [
       "Sensor monitoring",
@@ -166,11 +172,8 @@ export const projects: ProjectDetail[] = [
       "A locker management system with user registration, authentication, NFC-based access control, and locker status monitoring.",
     overview:
       "An access control system for managing locker use through NFC authentication and user registration.",
-    image: "/projects/smart-locker-system/cover.png",
-    gallery: [
-      "/projects/smart-locker-system/screenshot-1.png",
-      "/projects/smart-locker-system/screenshot-2.png",
-    ],
+    cover: "/pics/locker.png",
+    screenshots: [],
     tech: ["C++", "Python", "HTML", "SQL", "Arduino", "Raspberry Pi"],
     features: [
       "NFC-based access",
@@ -192,11 +195,8 @@ export const projects: ProjectDetail[] = [
       "A POS system for transaction processing, inventory tracking, and sales reporting with database-connected records.",
     overview:
       "A point-of-sale system designed to manage sales transactions, product records, inventory tracking, and reports.",
-    image: "/projects/point-of-sale/cover.png",
-    gallery: [
-      "/projects/point-of-sale/screenshot-1.png",
-      "/projects/point-of-sale/screenshot-2.png",
-    ],
+    cover: "/pics/POS.png",
+    screenshots: [],
     tech: ["C#", "Python", "SQL"],
     features: [
       "Transaction processing",

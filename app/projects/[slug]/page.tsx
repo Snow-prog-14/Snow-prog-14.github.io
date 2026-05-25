@@ -48,7 +48,7 @@ export default async function ProjectPage({ params, searchParams }: ProjectPageP
           <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          BACK_TO_SYSTEM_MODULES
+          BACK TO SYSTEM MODULES
         </Link>
 
         {/* Header Section */}
@@ -92,7 +92,7 @@ export default async function ProjectPage({ params, searchParams }: ProjectPageP
         <section className="mb-20">
           <div className="relative aspect-video rounded-4xl overflow-hidden border border-gray-100 bg-gray-50 shadow-2xl shadow-violet-100/40">
             <Image 
-              src={project.image}
+              src={project.cover}
               alt={project.title}
               fill
               className="object-cover"
@@ -166,11 +166,11 @@ export default async function ProjectPage({ params, searchParams }: ProjectPageP
               <div className="w-2 h-6 bg-emerald-500 rounded-full" />
               <h2 className="text-xl font-black text-gray-950 uppercase tracking-widest">System Documentation</h2>
             </div>
-            <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Screenshots_01-{String(project.gallery.length).padStart(2, "0")}</span>
+            <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Screenshots_01-{String(project.screenshots.length).padStart(2, "0")}</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {project.gallery.map((img: string, i: number) => (
+            {project.screenshots.map((img: string, i: number) => (
               <div key={i} className="group relative aspect-video rounded-3xl overflow-hidden border border-gray-100 bg-gray-50 hover:border-violet-200 transition-all shadow-xl shadow-gray-200/40">
                 <Image 
                   src={img}
@@ -190,7 +190,7 @@ export default async function ProjectPage({ params, searchParams }: ProjectPageP
             href={backHref}
             className="px-8 py-4 rounded-2xl bg-slate-950 text-white text-xs font-black tracking-[0.2em] hover:bg-violet-600 transition-all shadow-xl shadow-slate-200"
           >
-            RETURN_TO_BASE
+            RETURN
           </Link>
           
           <div className="flex items-center gap-4">
